@@ -1,0 +1,98 @@
+/* frontend/src/components/Navbar.css */
+
+.navbar {
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Matching Add Item button gradient */
+    padding: 1rem 2rem; /* Adjusted padding for a better look */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    position: sticky; /* Makes the navbar stick to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.navbar-brand {
+    font-size: 1.8rem; /* Larger font size for brand */
+    font-weight: 700; /* Bolder brand text */
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-right: 2rem; /* Space between brand and nav links */
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between nav items */
+}
+
+.nav-item .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem; /* Larger font for links */
+    font-weight: 500;
+    padding: 0.5rem 0; /* Vertical padding for hover effect */
+    transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.2s ease;
+    position: relative; /* For underline effect */
+}
+
+.nav-item .nav-link:hover {
+    color: #f0f0f0; /* Slightly lighter on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Subtle glow */
+}
+
+/* Underline effect on hover/active */
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Position below text */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-item .nav-link:hover::after,
+.nav-item .nav-link.active::after { /* Add .active class if you implement active link styling */
+    width: 100%;
+}
+
+/* Responsive adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 1rem;
+    }
+
+    .navbar-brand {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item .nav-link {
+        padding: 0.8rem 0;
+        display: block; /* Make links block to fill width */
+    }
+}

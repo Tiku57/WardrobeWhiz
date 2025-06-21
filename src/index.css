@@ -1,0 +1,47 @@
+/* frontend/src/index.css */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e0f2f7; /* A light blue shade, you can adjust this */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrollbar on the body */
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/* Ensure the root div also stretches to fill the body */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Global styles for headings if not already defined elsewhere */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+/* Global link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none; /* Keep consistent */
+}
+
+/* Basic button reset/style if not handled by individual components */
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,189 @@
+/* frontend/src/components/AddItemForm.css */
+
+.add-item-form-container {
+    max-width: 650px; /* Slightly wider form */
+    margin: 40px auto;
+    padding: 35px; /* More padding */
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font stack */
+}
+
+.add-item-form-container h2 {
+    text-align: center;
+    color: #2c3e50; /* Darker heading color, matching Navbar's core tone */
+    margin-bottom: 30px; /* More space below heading */
+    font-size: 2.2rem; /* Larger heading */
+    font-weight: 700; /* Bolder heading */
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 25px; /* More space between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px; /* More space below label */
+    font-weight: 600; /* Semi-bold labels */
+    color: #34495e; /* Darker label color */
+    font-size: 1.05rem; /* Slightly larger label font */
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px; /* More padding for inputs */
+    border: 1px solid #cad1d8; /* Lighter, more subtle border */
+    border-radius: 8px; /* More rounded input corners */
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none; /* Remove default styling for select/inputs on some browsers */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #3498db; /* Vibrant blue border on focus */
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.25); /* Glow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px; /* Taller textarea */
+}
+
+/* Style for the file name displayed next to file inputs */
+.file-name {
+    display: block;
+    margin-top: 8px; /* More space above file name */
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+}
+
+.file-names {
+    margin-top: 10px; /* More space above file names list */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.file-names .file-name {
+    background-color: #eef1f4; /* Light background for file names */
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #dce1e6;
+}
+
+/* Submit Button Styling - Aligned with Navbar's vibrant theme */
+.submit-button {
+    width: 100%;
+    padding: 16px; /* Larger padding for button */
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Matching Navbar gradient */
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    font-size: 1.15rem; /* Larger font size */
+    font-weight: 700; /* Bolder text */
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Pronounced shadow */
+    letter-spacing: 0.5px;
+    outline: none; /* Remove outline on focus */
+}
+
+.submit-button:hover {
+    background: linear-gradient(to right, #2575fc 0%, #6a11cb 100%); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Stronger lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); /* Enhanced shadow on hover */
+}
+
+.submit-button:active {
+    transform: translateY(0); /* Press down effect on click */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styling for success and error messages */
+.message {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.message.success {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Green border */
+}
+
+.message.error {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Red border */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .add-item-form-container {
+        margin: 20px auto;
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .add-item-form-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea,
+    .form-group select {
+        padding: 12px;
+    }
+
+    .submit-button {
+        padding: 14px;
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-item-form-container {
+        padding: 20px;
+    }
+
+    .add-item-form-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
